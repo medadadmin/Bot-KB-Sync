@@ -1,0 +1,12 @@
+{
+  "name": "KnowledgeBaseSync",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "minimist": "^1.2.5",
+    "xlsx": "^0.16.9"
+  }
+}

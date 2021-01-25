@@ -3,9 +3,15 @@ const fs = require('fs');
 const {sheetNameToLang} = require('./config')
 
 function buildQuestionEntity(topic, lang, alternatives, answer) {
+    const contexts = ['global'];
+
+    if (topic) {
+        contexts.push(topic);
+    }
+
     return {
         "action": "text",
-        "contexts": [topic],
+        "contexts": contexts,
         "enabled": true,
         "answers": {[lang]: [answer]},
         "questions": {[lang]: alternatives},
@@ -44,10 +50,6 @@ async function parseFile(file) {
 
             if (!questions[sheetNameToLang[sheetName]]) {
                 questions[sheetNameToLang[sheetName]] = {}
-            }
-
-            if (!question.Intent) {
-                question.Intent = 'global'
             }
 
             if (!questions[sheetNameToLang[sheetName]][question.Intent]) {

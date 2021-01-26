@@ -2,16 +2,10 @@ const xlsx = require('xlsx');
 const fs = require('fs');
 const {sheetNameToLang} = require('./config')
 
-function buildQuestionEntity(topic, lang, alternatives, answer) {
-    const contexts = ['global'];
-
-    if (topic) {
-        contexts.push(topic);
-    }
-
+function buildQuestionEntity(contexts = [], lang, alternatives, answer) {
     return {
         "action": "text",
-        "contexts": contexts,
+        "contexts": ['global', ...contexts.filter(context => !!context)],
         "enabled": true,
         "answers": {[lang]: [answer]},
         "questions": {[lang]: alternatives},
@@ -72,8 +66,8 @@ async function parseFile(file) {
     Object.keys(questions).forEach(lang => {
         Object.keys(questions[lang]).forEach(intent => {
             const intentQuestions = questions[lang][intent];
-            const {Category, Answers} = intentQuestions[0];
-            questionsList.push(buildQuestionEntity(Category, lang, intentQuestions.map(q => q.Question), Answers));
+            const {Category, Answers, Intent} = intentQuestions[0];
+            questionsList.push(buildQuestionEntity([Category, Intent], lang, intentQuestions.map(q => q.Question), Answers));
         })
     })
 

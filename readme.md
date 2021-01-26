@@ -16,3 +16,4 @@ Used to import questions from a file to botpress
 * File must have an Intent, Question, Answers and Category columns;
 * File should have only questions sheets
 * Sheet name should be language name i.e 'Arabic', 'English'
+* All questions with same answer must have the same Intent.

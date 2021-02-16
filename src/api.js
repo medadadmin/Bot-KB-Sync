@@ -22,8 +22,20 @@ async function saveQuestions(bot, questions) {
     }
 }
 
+async function clearPreviousQuestions(bot) {
+    const res = await axios.get(`bots/${bot}/mod/qna/questions`);
+    const previousQuestions = res.data.items;
+
+    for (let i = 0; i < previousQuestions.length; i++) {
+        await axios.post(`bots/${bot}/mod/qna/questions/${previousQuestions[i].id}/delete`)
+    }
+}
+
+
+
 module.exports = {
     setApiDefaults,
     login,
     saveQuestions,
+    clearPreviousQuestions
 };

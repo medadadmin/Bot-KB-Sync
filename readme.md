@@ -10,7 +10,8 @@ Used to import questions from a file to botpress
 | --bot | botpress bot id      |   my-bot |
 | --file | file containing questions      |    /test-file.xlsx |
 | --email | botpress admin login info     |    username |
-| --password | botpress admin login info      |    password |
+| --password | botpress admin login info   
+| --clear | clear previous questions |    false |
 
 **Execl files**
 * File must have an Intent, Question, Answers and Category columns;

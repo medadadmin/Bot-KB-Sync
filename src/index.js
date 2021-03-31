@@ -6,7 +6,7 @@ main();
 
 async function main() {
     try {
-        const {api, bot, email, password, file, clear} = parseArgs();
+        const {api, bot, email, password, file, clear, useIntent} = parseArgs();
         setApiDefaults(api);
 
         await login(email, password);
@@ -17,7 +17,7 @@ async function main() {
 
 
         const questions = await parseFile(file);
-        await saveQuestions(bot, questions);
+        await saveQuestions(bot, questions, useIntent);
     } catch (e) {
         console.error(e);
     }

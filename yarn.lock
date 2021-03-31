@@ -10,6 +10,16 @@ adler-32@~1.2.0:
     exit-on-epipe "~1.0.1"
     printj "~1.1.0"
 
+arabic-nlp@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/arabic-nlp/-/arabic-nlp-0.0.4.tgz#1b88a79a27c61deff54cbbea996db2c998cc5c42"
+  integrity sha512-TwUx+phahuntu9EUNeZToGbJMywugEtmZoXHy6KGBDC9z68/ecrJLXCeoljlk9M9/FYHdt3iCjJwl5OwdfuIYg==
+
+arabic-stemmer@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/arabic-stemmer/-/arabic-stemmer-1.1.3.tgz#5889e5062f303bd8bdcdaef18be1bab66b1e820a"
+  integrity sha512-hDZWOPoQuqNX8BQHfT7yzUsuGkmz5mJBLzTqPuXIUUpsgJHqCwRhdjY1SebUMg+z0j8a99AuKxMPZlLsWmZaZQ==
+
 axios@^0.21.1:
   version "0.21.1"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.1.tgz#22563481962f4d6bde9a76d516ef0e5d3c09b2b8"
@@ -76,6 +86,23 @@ minimist@^1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
   integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
+
+nan@^2.14.0:
+  version "2.14.2"
+  resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.2.tgz#f5376400695168f4cc694ac9393d0c9585eeea19"
+  integrity sha512-M2ufzIiINKCuDfBSAUr1vWQ+vuVcA9kqx8JJUsbQi6yf1uGRyb7HfpdfUr5qLXf3B/t8dPvcjhKMmlfnP47EzQ==
+
+nanoid@^3.1.20:
+  version "3.1.20"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.20.tgz#badc263c6b1dcf14b71efaa85f6ab4c1d6cfc788"
+  integrity sha512-a1cQNyczgKbLX9jwbS/+d7W8fX/RfgYR7lVWwWOGIPNgK2m0MWvrGF6/m4kk6U3QcFMnZf3RIhL0v2Jgh/0Uxw==
+
+node-snowball@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/node-snowball/-/node-snowball-0.6.0.tgz#7c1f60e34f1433e09a6cb4d842ee2b7901f0a9d4"
+  integrity sha512-wZ7xQ2t7r83yJ9DToJAcs/IK23NZnS2txfRoLkKSe0ZlS4vbHnx0War2q9EMQt3hA2ahgqZk8ygN07qUdr7nuA==
+  dependencies:
+    nan "^2.14.0"
 
 printj@~1.1.0, printj@~1.1.2:
   version "1.1.2"

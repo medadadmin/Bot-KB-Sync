@@ -66,8 +66,10 @@ async function parseFile(file) {
     Object.keys(questions).forEach(lang => {
         Object.keys(questions[lang]).forEach(intent => {
             const intentQuestions = questions[lang][intent];
-            const {Category, Answers, Intent} = intentQuestions[0];
-            questionsList.push(buildQuestionEntity([`Category/${Category}`, `Intent/${Intent}`], lang, intentQuestions.map(q => q.Question), Answers));
+            if(intentQuestions && intentQuestions.length) {
+                const {Category, Answers, Intent, Order} = intentQuestions[0];
+                questionsList.push(buildQuestionEntity([`Category/${Category}`, `Intent/${Intent}`,  `Order/${Order}`], lang, intentQuestions.map(q => q.Question), Answers));
+            }
         })
     })
 

@@ -1,4 +1,4 @@
-const {parseArgs, codeNameToLangName} = require('../config');
+const {parseArgs} = require('../config');
 const {setApiDefaults, saveQuestions} = require('./wit-api');
 const {stem} = require('../stem');
 
@@ -10,7 +10,7 @@ async function main() {
     setApiDefaults(token);
 
     if(clear) {
-      //
+      // todo: implement
     }
 
     const questions = parseQNAFile(file);

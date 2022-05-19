@@ -2,7 +2,8 @@
   "name": "KnowledgeBaseSync",
   "version": "1.0.0",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "wit": "node src/wit/index.js"
   },
   "dependencies": {
     "axios": "^0.21.1",

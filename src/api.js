@@ -8,7 +8,7 @@ function setApiDefaults(api) {
 
 async function login(email, password) {
     const res = await axios.post(`auth/login/basic/default`, JSON.stringify({email, password}));
-    const token = res.data.payload.token;
+    const token = res.data.payload.jwt;
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 }
 
